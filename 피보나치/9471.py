@@ -7,7 +7,7 @@
 # (a * b) %m = (a % m * b* m) % m
 ##### a + b = Fn[n], a = Fn[n-1], b = Fn[n-2] 로 이해할 수 있기 때문.
 
-```py
+## pass 코드
 import sys
 input = sys.stdin.readline
 
@@ -26,10 +26,9 @@ for _ in range(1, P+1):
         mod1, mod2 = mod2, (mod1+mod2)%M
     
     print('{} {}'.format(N, T))
-```
 
-* 하기는 수정해야할 내용
-```py
+
+## 하기는 수정해야할 내용
 import sys
 input = sys.stdin.readline
 
@@ -49,4 +48,4 @@ for test_case in range(1, P+1):
             break
     
     print('{} {}'.format(N, T))
-```
+    
