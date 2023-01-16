@@ -1,5 +1,3 @@
-# 참고: https://github.com/GGamangCoder/TIL/blob/main/BOJ/BFS%26DFS.md
-
 import sys
 input = sys.stdin.readline
 
