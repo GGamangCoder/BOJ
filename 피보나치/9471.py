@@ -41,11 +41,11 @@ for test_case in range(1, P+1):
     N, M = map(int, input().split())
 
     while True:
+        if Fn[-2] % M == 0 and Fn[-1] % M == 1:
+            break
+
         T += 1
         Fn.append((Fn[-2]+Fn[-1]) % M)
 
-        if Fn[-2] % M == 0 and Fn[-1] & M == 1:
-            break
-    
     print('{} {}'.format(N, T))
     
