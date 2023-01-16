@@ -1,4 +1,6 @@
-## BFS
+####################
+##### BFS 풀이 #####
+####################
 
 import sys
 input = sys.stdin.readline
@@ -38,7 +40,9 @@ for test_case in range(1, T+1):
     print(ans)
 
     
-## DFS 풀이
+####################
+##### DFS 풀이 #####
+####################
 
 import sys
 input = sys.stdin.readline
