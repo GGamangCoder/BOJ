@@ -1,20 +1,17 @@
-## 수정 필요
-
 import sys
+import copy
 input = sys.stdin.readline
 
 # 적록색약
 def inNormal():
-    graph = temp[:][:]
-    global cnt
-    cnt = 0
+    global graph
+    graph = copy.deepcopy(temp)
     for i in range(N):
         for j in range(N):
             if graph[i][j] == 'G':
                 graph[i][j] = 'R'
     color.remove('G')
-    display()
-#    return graph
+    return display()
 
 # 함수 구현
 def bfs(x, y, rgb):
@@ -37,22 +34,20 @@ def bfs(x, y, rgb):
 N = int(input())
 color = ['R', 'G', 'B']
 graph = []
-cnt = 0
 for _ in range(N):
     graph.append(list(map(str, input())))
-temp = graph[:][:]
+temp = copy.deepcopy(graph)
 
 # 출력
 def display():
-    global cnt
+    cnt = 0
     for rgb in color:
         for i in range(N):
             for j in range(N):
                 if graph[i][j] == rgb:
                     bfs(i, j, rgb)
                     cnt += 1
+    return cnt
 
-display()
-print(cnt, end = ' ')
-inNormal()
-print(cnt)
+print(display(), end = ' ')
+print(inNormal())
