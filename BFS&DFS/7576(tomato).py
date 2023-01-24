@@ -13,7 +13,7 @@ def bfs():
             if 0 <= nx < M and 0 <= ny < N:
                 if graph[nx][ny] == 0:
                     queue.append((nx, ny))
-                    graph[nx][ny] = graph[x][y] + 1    
+                    graph[nx][ny] = graph[x][y] + 1
 
 # Input 
 N, M = map(int, input().split())
@@ -28,12 +28,9 @@ for i in range(M):
             queue.append((i, j))
 
 # Output
-print(graph)
 bfs()
-print(graph)
-# print(list(map(max, graph)))
-# ans = max(map(max, graph)) -1
-# for i in graph:
-#     if 0 in i:
-#         ans = -1
-# print(ans)
+ans = max(map(max, graph)) -1
+for i in graph:
+    if 0 in i:
+        ans = -1
+print(ans)
