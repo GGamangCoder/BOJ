@@ -27,6 +27,7 @@ def bfs():
                 spread = True
         # 곰팡이 못 퍼지면 그 자리 끝
         if not spread:
+            print(day)
             virus[x][y][(day%2)]=False
 
 # Input - User
