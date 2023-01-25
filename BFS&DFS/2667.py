@@ -29,13 +29,12 @@ def bfs(x, y):
                     graph[nx][ny] = 0
     return visited
 
-cnt = 0
 for i in range(N):
     for j in range(N):
         if graph[i][j] == 1:
             visited = bfs(i, j)
             house_size.append(len(visited))
-            cnt += 1
+
 print(len(house_size))
 house_size = sorted(house_size)
 for num in house_size:
