@@ -1,6 +1,6 @@
 # 수 찾기 문제
 # 이분 탐색으로도 풀어볼 수 있는 문제
-# 참고 - https://chancoding.tistory.com/43
+# 참고 - https://chancoding.tistory.com/43  - TIL 정리 필요
 
 import sys
 input = sys.stdin.readline
