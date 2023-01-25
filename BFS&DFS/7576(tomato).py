@@ -1,13 +1,15 @@
 import sys
 input = sys.stdin.readline
+from collections import deque
 
 # function declare
 def bfs():
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
+    global queue
     
     while queue:
-        x, y = queue.pop(0)
+        x, y = queue.popleft()
         for i in range(4):
             nx, ny = x + dx[i], y + dy[i]
             if 0 <= nx < M and 0 <= ny < N:
@@ -17,7 +19,7 @@ def bfs():
 
 # Input 
 N, M = map(int, input().split())
-graph, queue = [], []
+graph, queue = [], deque([])
 ans = 0
 
 for i in range(M):
