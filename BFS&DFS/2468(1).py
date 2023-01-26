@@ -9,7 +9,7 @@ for i in range(N):
     graph.append(list(map(int, input().split())))
     min_list.append(min(graph[i]))
     max_list.append(max(graph[i]))
-min, max = min(min_list), max(max_list)
+min, max = min(min_list)-1, max(max_list)
 
 def bfs(x, y, high):
     dx, dy = [0, 0, 1, -1], [1, -1, 0, 0]
@@ -28,9 +28,8 @@ def bfs(x, y, high):
                     queue.append((nx, ny))
 
 res = 0
-for lim in range(min, min):
+for lim in range(min, max):
     visited = [[0]*N for _ in range(N)]
-    print(visited)
     cnt = 0
     for i in range(N):
         for j in range(N):
@@ -40,5 +39,3 @@ for lim in range(min, min):
     if res < cnt:
         res = cnt
 print(res)
-visited = [[0]*N for _ in range(N)]
-print(visited)
