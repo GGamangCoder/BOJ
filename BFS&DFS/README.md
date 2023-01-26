@@ -18,7 +18,7 @@
 * 16234번 문제: 인구이동 **[[문제]](https://www.acmicpc.net/problem/16234)** / **[[풀이]](16234.py)**  
 * 15806번 문제: 영우의 기숙사 청소 **[[문제]](https://www.acmicpc.net/problem/15806)** / **[[시도1_BFS]](15806(Dom)(try).py)** / **[[시도2_BFS & 홀/짝]](15806(Dom).py)**
 * 2667번 문제: 단지번호 붙이기 **[[문제]](https://www.acmicpc.net/problem/2667)** / **[[풀이]](2667.py)**
-* 11724번 문제: 단지번호 붙이기 **[[문제]](https://www.acmicpc.net/problem/11724)** / **[[풀이]](11724.py)**
+* 11724번 문제: 연결 요소의 개수(2중 리스트) **[[문제]](https://www.acmicpc.net/problem/11724)** / **[[풀이]](11724.py)**
 
 <br>
 
