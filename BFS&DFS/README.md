@@ -14,10 +14,12 @@
 * 10026번 문제: 적록색약 **[[문제]](https://www.acmicpc.net/problem/10026)** / **[[풀이]](10026.py)**  
 * 2583번 문제: 영역 구하기 **[[문제]](https://www.acmicpc.net/problem/2583)** / **[[풀이]](2583.py)**  
 * 7576번 문제: 토마토_2차원(BFS_deque) **[[문제]](https://www.acmicpc.net/problem/7576)** / **[[풀이]](7576.py)**  
-
+* 7562번 문제: 나이트 이동 **[[문제]](https://www.acmicpc.net/problem/7562)** / **[[풀이]](7562.py)**  
 * 16234번 문제: 인구이동 **[[문제]](https://www.acmicpc.net/problem/16234)** / **[[풀이]](16234.py)**  
 * 15806번 문제: 영우의 기숙사 청소 **[[문제]](https://www.acmicpc.net/problem/15806)** / **[[시도1_BFS]](15806(Dom)(try).py)** / **[[시도2_BFS & 홀/짝]](15806(Dom).py)**
-* 2667번 문제: 단지번호 붙이기 **[[문제]](https://www.acmicpc.net/problem/2667)** / **[[풀이]](2667.py)**  
+* 2667번 문제: 단지번호 붙이기 **[[문제]](https://www.acmicpc.net/problem/2667)** / **[[풀이]](2667.py)**
+* 11724번 문제: 단지번호 붙이기 **[[문제]](https://www.acmicpc.net/problem/11724)** / **[[풀이]](11724.py)**
 
+<br>
 
 * 시도해볼 문제(미해결) - 15806(영우 기숙사 청소), 3197(Swan in Lake)
