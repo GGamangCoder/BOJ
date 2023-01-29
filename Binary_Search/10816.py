@@ -1,4 +1,5 @@
-#### hash set and map
+## 10815 와 동일한 문제
+## hash set and map
 
 import sys, collections
 input = sys.stdin.readline
@@ -11,6 +12,3 @@ B = list(map(int, input().split()))
 
 for cnt in B:
     print(dict[cnt], end = ' ')
-
-
-#### Binary Search
