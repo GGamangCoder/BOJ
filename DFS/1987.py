@@ -1,41 +1,31 @@
 # 알파벳 문제
+# DFS를 활용한 백트래킹 - 중복되지 않는 알파벳 조건 때문에
+
+# import sys
+# input = sys.stdin.readline
 
 N, M = map(int, input().split())
-graph = []
-for _ in range(N):
-    graph.append(list(input()))
+graph = [0 for _ in range(M)]          # 그래프 모양
+for i in range(N):
+    graph[i] = list(map(lambda x: ord(x)-65, input()))
+# 방문 알파벳이 들어갈 공간, 첫 좌표부터,
+# 여기에 문자를 넣으면 시간 초과가 떠서 숫자로 바꿈. 시간 복잡도 ?!
+visited = [0]*26
+ans = 0
 
-def dfs(start):
+def dfs(x, y, cnt):
     dx, dy = [0, 0, 1, -1], [1, -1, 0, 0]
-    stack, visited = [(0, 0)], []
-    visited.append(start)
-    cnt = 0
-    temp = []
-    flag = False
-    
-    while stack:
-        x, y = stack.pop()
-        print((x,y))
-        cnt = max(cnt, len(visited))    # 2. 다만 추가될수록 visited만 증가 시 최댓값 초기화
-        if not(x == 0 or y== 0) and graph[x][y] in visited:      # 1. 이미 있는거면 visited도 빼주기
-            visited.pop()
-            flag = True
-        for i in range(4):
-            nx, ny = x + dx[i], y + dy[i]
-            if (0 <= nx < N) and (0 <= ny < M) and graph[nx][ny] not in visited:
-                if flag == True:
-                    continue
-                stack.append((nx, ny))
-                visited.append(graph[nx][ny])
-                temp.append((nx, ny))
-                print(stack, visited)
-                break
-            if i == 3:      # 끝에 지점에 다다르면 다시 분기점에서 체크
-                if temp != []:
-                    x, y = temp.pop()
-                    stack.append((x, y))
-        flag = False
-                
-    return cnt
+    global ans
+    ans = max(cnt, ans)
+    visited[graph[x][y]] = 1
 
-print(dfs(graph[0][0]))
+    for i in range(4):
+        nx, ny = x + dx[i], y + dy[i]
+        if (0 <= nx < N) and (0 <= ny < M):
+            if visited[graph[nx][ny]] == 0:
+                visited[graph[nx][ny]] = 1
+                dfs(nx, ny, cnt + 1)
+                visited[graph[nx][ny]] = 0
+
+dfs(0, 0, 1)
+print(ans)         # 처음 지점부터 카운트 시작

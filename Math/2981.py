@@ -1,18 +1,20 @@
 # 검문 - 숫자 N개, M으로 나눌 때 나머지 같은 모든 M 출력
 
 import sys
-input = int(sys.stdin.readline())
+input = sys.stdin.readline
 
-def gcd(m,n):       # 최대 공약수
-    while n != 0:
-        t = m % n
-        (m, n) = (n, t)
-    return abs(m)
+N = int(input())
+num_list = []
+for _ in range(N):
+    num_list.append(int(input()))
+min_num = min(num_list)
+ans = set()
 
-N = input
-list = []
-if N != 1:
-    list.append(input)
-
-
-#################### 미완
+for i in range(min_num, 1, -1):
+    for j in range(N-1):
+        if num_list[j] % i != num_list[j+1] % i:
+            break
+        if j == N-2:
+            ans.add(i)
+for a in ans:
+    print(a, end=' ')
