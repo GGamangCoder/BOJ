@@ -14,7 +14,8 @@ for i in range(min_num, 1, -1):
     for j in range(N-1):
         if num_list[j] % i != num_list[j+1] % i:
             break
-        if j == N-2:
+        elif j == N-2:
             ans.add(i)
+ans = sorted(list(ans))
 for a in ans:
     print(a, end=' ')

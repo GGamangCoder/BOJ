@@ -1,6 +1,6 @@
 ## BFS & DFS 개념
 
-알고리즘 참고 링크 - TIL/BOJ/BFS&DFS) **[[BFS & DFS]](https://github.com/GGamangCoder/TIL/blob/main/Algorithm/BFS%26DFS.md)**
+알고리즘 참고 링크 - TIL/Algorithm/BFS&DFS) **[[BFS & DFS]](https://github.com/GGamangCoder/TIL/blob/main/Algorithm/BFS%26DFS.md)**
 
 <br>
 

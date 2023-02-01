@@ -26,4 +26,4 @@ def dfs(x, y, cnt):
                 visited[graph[nx][ny]] = 0
 
 dfs(0, 0, 1)
-print(ans)         # 처음 지점부터 카운트 시작
+print(ans)
