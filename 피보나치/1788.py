@@ -20,10 +20,10 @@ def Fn(n):
         return dic[n]
     
     if n >= 2:
-        dic[n] = (Fn(n-1)+Fn(n-2)) % 1000000000
+        dic[n] = (dic[n-2]+dic[n-1]) % 1000000000
         return dic[n]
     else:       # n < 0
-        dic[n] = (Fn(n+2)-Fn(n+1)) % 1000000000
+        dic[n] = (dic[n+2]-dic[n+1]) % 1000000000
         return dic[n]
 
 print('{}'.format(Fn_case))
