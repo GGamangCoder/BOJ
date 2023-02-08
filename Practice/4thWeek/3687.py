@@ -4,26 +4,23 @@ def big(cnt):
     return ans
 
 def small(cnt):
-    # ans = ''
-    # while cnt > 0:
-    #     if cnt % 7
-    #     if cnt >= 7:
-    #         ans = '8' + ans
-    #         cnt -= 7
-    #     elif cnt == 6:
-    #         ans = '6' + ans
-    #         cnt -= 6
-    #     elif cnt == 5:
-    #         ans = '5' + ans
-    #         cnt -= 6
-    #     elif cnt == 4:
-    #         ans = '6' + ans
-    #         cnt -= 6
-    #     elif cnt == 3:
-
-
-    pass
-
+    ans = ''
+    digit_list = [0, 0, 1, 7, 4, 2, 6, 8, 10, 18, 22]
+    if cnt <= 10:
+        ans = digit_list[cnt]
+        return ans
+    while cnt >= 7:
+            cnt -= 7
+            ans += '8'
+    if cnt == 1:
+        ans = '10' + ans[1:]
+    elif cnt == 3:
+        ans = '200' + ans[2:]
+    elif cnt == 4:
+        ans = '20' + ans[1:]
+    else:   # 0, 2, 5, 6
+        ans = str(digit_list[cnt+1]) + ans
+    return ans
 
 
 for tc in range(1, T + 1):
