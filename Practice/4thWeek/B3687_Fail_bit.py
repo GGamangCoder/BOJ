@@ -20,4 +20,4 @@ for i in code_list:
     print(''.join(i))
 
 for i in range(1<<C):
-    
+    pass

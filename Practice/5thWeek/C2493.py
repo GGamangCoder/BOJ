@@ -1,18 +1,6 @@
 N = int(input())        # 1 <= N <= 500,000
 high_list = list(map(int, input().split())) # 1 <= h <= 100,000,000
 
-# for i in range(N-1, -1, -1):
-#     flag = False
-#     for j in range(i, -1, -1):
-#         if high_list[i] < high_list[j]:
-#             high_list[i] = j + 1
-#             flag = True
-#             break
-#     if flag == False:
-#         high_list[i] = 0
-# print(*high_list)
-
-
 ans = []
 stack = []
 
