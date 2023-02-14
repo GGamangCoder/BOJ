@@ -1,3 +1,5 @@
+# 민겸 수
+
 s = input()
 stack_small = []
 stack_big = []
