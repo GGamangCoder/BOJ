@@ -1,6 +1,6 @@
-## Brute Force(브루트 포스) 개념
+## Brute Force(브루트 포스)
 
-알고리즘 참고 링크 - TIL/BOJ/Brute_Force.md) **[[Brute_Force]]()**
+알고리즘 참고 링크 - TIL/Algorithm/Brute_Force.md) **[[Brute_Force]]()**
 
 <br>
 
