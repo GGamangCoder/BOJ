@@ -4,12 +4,9 @@
 import heapq
 
 N = int(input())            # 수업 갯수
-lecture_list = [0] * N      # 수업 타임 담을 공간
 heap = []
-for i in range(N):
-    lecture_list[i] = list(map(int, input().split()))
-# 시작 시간 빠른 순으로 정렬하여 뒤로 붙이기
-lecture_list.sort()
+lecture_list = [list(map(int, input().split())) for _ in range(N)]
+lecture_list.sort(key = lambda x: x[0])
 heapq.heappush(heap, lecture_list[0][1])
 for i in range(1, N):
     # 끝날 시간보다 빠르면 일단 담아놓기
