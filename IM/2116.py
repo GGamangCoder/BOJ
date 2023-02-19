@@ -20,10 +20,10 @@ for i in range(1, 7):   # 1~6 까지의 수
             dice_sum += max(dice[j][2:])
         elif num == dice[j][2]:
             num = dice[j][3]
-            dice_sum += max(max(dice[j][:2]), max(dice[j][4:]))
+            dice_sum += max(dice[j][:2] + dice[j][4:])
         elif num == dice[j][3]:
             num = dice[j][2]
-            dice_sum += max(max(dice[j][:2]), max(dice[j][4:]))
+            dice_sum += max(dice[j][:2] + dice[j][4:])
         elif num == dice[j][4]:
             num = dice[j][5]
             dice_sum += max(dice[j][:4])
