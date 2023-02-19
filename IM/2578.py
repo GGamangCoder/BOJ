@@ -36,13 +36,14 @@ def check_bingo():
 # 게임 진행
 def game():
     cnt = 0
-    for i in order:
-        for m in range(5):
-            for n in range(5):
-                if arr[n][m] == i:
-                    arr[n][m] = 0
-                    cnt += 1
-        if cnt >= 12 and check_bingo():
-            return cnt
+    while True:
+        for i in order:
+            for m in range(5):
+                for n in range(5):
+                    if arr[n][m] == i:
+                        arr[n][m] = 0
+                        cnt += 1
+            if cnt >= 12 and check_bingo():
+                return cnt
 
 print(game())
