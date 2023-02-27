@@ -1,33 +1,18 @@
-# 피보나치 수의 확장
-# 문제를 제대로 안 읽어 런타임 에러 ,, 다시 해서 극복
-# 왜 위의 코드가 런타임 에러를 띄웠는지 나중에 체크해보자
-
-###### Fn 이용
-import sys
-input = sys.stdin.readline().rstrip
-
 n = int(input())
-dic = {0:0, 1:1}
-Fn_case = 1
+flag = 0        # n이 0일 때
+if n > 0:
+    flag = 1
+elif n < 0:
+    flag = -1
 
-if n == 0:
-    Fn_case = 0
-elif n < 0 and n %2 == 0:
-    Fn_case = -1
+Fn = [0, 1]
+n = abs(n)
+for _ in range(2, n + 1):
+    Fn.append((Fn[-1]+Fn[-2])%1000000000)
 
-def Fn(n):
-    if n in dic:
-        return dic[n]
-    
-    if n >= 2:
-        dic[n] = (dic[n-2]+dic[n-1]) % 1000000000
-        return dic[n]
-    else:       # n < 0
-        dic[n] = (dic[n+2]-dic[n+1]) % 1000000000
-        return dic[n]
+if flag == -1:      # 음수일 때,
+    if n % 2 != 0:
+        flag = -flag
 
-print('{}'.format(Fn_case))
-print('{}'.format(abs(Fn(n))))
-
-###### Pass code
-
+print(flag)
+print(Fn[n])
