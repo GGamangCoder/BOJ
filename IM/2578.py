@@ -1,50 +1,31 @@
 # 빙고 게임
-import sys
-input = sys.stdin.readline
 
-arr = [list(map(int, input().split())) for _ in range(5)]
-order = []
-for _ in range(5):
-    order += list(map(int, input().split()))
+bingo = [list(map(int, input().split())) for _ in range(5)]
 
+bingo_row = list(map(list, zip(*bingo)))
+bingo_cross = []
 
-# 빙고 여부 확인
-def check_bingo():
-    res = 0
-    for i in range(5):
-        # 한 행
-        if arr[i].count(0) == 5:
-            res += 1
-        # 한 열
-        if list(zip(*arr))[i].count(0) == 5:
-            res += 1
-    # 대각선
-    temp1 = temp2 = 0
-    for i in range(5):
-        if arr[i][i] == 0:
-            temp1 += 1
-        if arr[i][4-i] == 0:
-            temp2 += 1
-    if temp1 == 5:
-        res += 1
-    if temp2 == 5:
-        res += 1
-    if res == 3:
-        return True
-    else:
-        return False
+bingo_cross = [[] for _ in range(2)]
+for i in range(5):
+    bingo_cross[0].append(bingo[i][i])
+    bingo_cross[1].append(bingo[i][4-i])
 
-# 게임 진행
-def game():
-    cnt = 0
-    while True:
-        for i in order:
-            for m in range(5):
-                for n in range(5):
-                    if arr[n][m] == i:
-                        arr[n][m] = 0
-                        cnt += 1
-            if cnt >= 12 and check_bingo():
-                return cnt
+bingo_all = bingo + bingo_row + bingo_cross
 
-print(game())
+mc_num = []
+for i in range(5):
+    mc_num += list(map(int, input().split()))
+
+cnt = 0         # 게임 진행 횟수
+for num in mc_num:
+    cnt += 1
+    bingo_cnt = 0       # 빙고 라인 수
+    for j in range(12):
+        if num in bingo_all[j]:
+            bingo_all[j].remove(num)
+        if bingo_all[j] == []:
+            bingo_cnt += 1
+    if bingo_cnt >= 3:
+        break
+
+print(cnt)
