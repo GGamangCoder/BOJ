@@ -1,38 +1,33 @@
-# 트리
+# 트리 - Fail
 
 N = int(input())
 
-trees = [[0]*3 for _ in range(N+1)]
+trees = [[] for _ in range(N)]   # 왼쪽([0]), 오른쪽([1]) 자식 노드
 temp = list(map(int, input().split()))
 
 # 트리 만들어주기
-for i in range(N):     # 0번 노드 ~ N-1번 노드
+for i in range(N):
     if temp[i] == -1:
         pass
     else:
-        child, parent = i+1, temp[i] + 1
-        if not trees[parent][0]:
-            trees[parent][0] = child
-        else:
-            trees[parent][1] = child
+        # 자식 노드들 추가해주기
+        trees[temp[i]].append(i)
 
-        trees[child][2] = parent
-
-erase_node = int(input())
-trees[erase_node+1] = [0, 0, 0]
-
-def count_leaf(tree, node):
-    global cnt
-    if node > N:
-        return
-    if not tree[node][0] and not tree[node][1]:
-        if node == erase_node+1:
-            return
-        cnt += 1
-        return
-    count_leaf(tree, tree[node][0])
-    count_leaf(tree, tree[node][1])
+remove_node = int(input())
+trees[remove_node] = [-1]
 
 cnt = 0
-count_leaf(trees, 1)
+def counting_leaf(tree, node):
+    global cnt
+    if node != N:
+        if not tree[node]:
+            if node == remove_node:
+                return
+            cnt += 1
+            return
+        else:
+            for i in range(len(tree[node])):
+                counting_leaf(tree, tree[node][i])
+
+counting_leaf(trees, 0)
 print(cnt)
