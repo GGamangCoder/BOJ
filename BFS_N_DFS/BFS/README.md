@@ -1,11 +1,8 @@
-## BFS & DFS 개념
+## BFS  
 
-알고리즘 참고 링크 - TIL/Algorithm/BFS&DFS) **[[BFS & DFS]](https://github.com/GGamangCoder/TIL/blob/main/Algorithm/BFS%26DFS.md)**
 
 <br>
 
-* 1012번 문제: 유기농배추  **[[문제]](https://www.acmicpc.net/problem/1012)** / **[[풀이]](1012.py)**
-* 1260번 문제: DFS 와 BFS **[[문제]](https://www.acmicpc.net/problem/1260)** / **[[풀이]](1260.py)**  
 * 2178번 문제: 미로찾기 **[[문제]](https://www.acmicpc.net/problem/2178)** / **[[풀이]](2178.py)**  
 
 * 2606번 문제: 바이러스 **[[문제]](https://www.acmicpc.net/problem/2606)** / **[[풀이]](2606.py)**  
@@ -32,7 +29,6 @@
 ### 이차원 배열
 
 * 7569번 문제: 토마토 문제 **[[문제]](https://www.acmicpc.net/problem/7569)** / **[[풀이]](7569.py)**
-
 * 1743번 문제: 음식물 피하기 **[[문제]](https://www.acmicpc.net/problem/1743)** / **[[풀이]](1743.py)**
 
 
