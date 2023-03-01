@@ -33,7 +33,8 @@
 
 * 7569번 문제: 토마토 문제 **[[문제]](https://www.acmicpc.net/problem/7569)** / **[[풀이]](7569.py)**
 
-* 7569번 문제: 토마토 문제 **[[문제]](https://www.acmicpc.net/problem/7569)** / **[[풀이]](7569.py)**
+* 1743번 문제: 음식물 피하기 **[[문제]](https://www.acmicpc.net/problem/1743)** / **[[풀이]](1743.py)**
+
 
 
 <br>
