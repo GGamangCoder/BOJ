@@ -13,3 +13,22 @@
 # 블리자드 M번 시행
 # 배열 선언 후에
 # 마법 시행 방법 안내
+
+di = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+cnt1 = cnt2 = cnt3 = 0
+
+# N: 사이즈, M: 시전 횟수
+N, M = map(int, input().split())
+arr = [list(map(int, input().split())) for _ in range(N)]
+d = []
+s = []
+for _ in range(M):
+    temp = input().split()
+    d.append(temp[0])
+    s.append(temp[1])
+
+def first_boom(d, s):   # 방향과 거리
+    pass
+
+def second_boom():
+    pass
