@@ -1,7 +1,7 @@
 ## Simulation(구현 & 시뮬레이션)
 
 (XXXXX)
-알고리즘 참고 링크 - TIL/Algorithm/Greedy.md) **[[Greedy_Algorithm]](https://github.com/GGamangCoder/TIL/blob/main/Algorithm/Greedy.md)**
+알고리즘 참고 링크 - TIL/Algorithm/Greedy.md **[[Greedy_Algorithm]](https://github.com/GGamangCoder/TIL/blob/main/Algorithm/Greedy.md)**
 
 
 <br>
