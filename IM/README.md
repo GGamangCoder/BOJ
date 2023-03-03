@@ -18,6 +18,9 @@
 * 2564 문제: 경비원 **[[문제]](https://www.acmicpc.net/problem/2563)** / **[[풀이]](BOJ/2564.py)**  
 * 2578 문제: 빙고 **[[문제]](https://www.acmicpc.net/problem/2578)** / **[[풀이]](BOJ/2578.py)**  
 
+* 2628 문제: 빙고 **[[문제]](https://www.acmicpc.net/problem/2628)** / **[[풀이]](BOJ/2628.py)**  
+
+* 2578 문제: 빙고 **[[문제]](https://www.acmicpc.net/problem/2578)** / **[[풀이]](BOJ/2578.py)**  
 
 
 ### [SWEA Problem]
