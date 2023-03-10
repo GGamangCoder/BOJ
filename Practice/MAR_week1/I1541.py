@@ -1,6 +1,6 @@
 # 잃어버린 괄호
-
-eq = input()
+import sys
+eq = sys.stdin.readline().strip()
 ans = 0
 prev_val = ''
 temp = ''
