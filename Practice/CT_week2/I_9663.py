@@ -1,5 +1,6 @@
 # N-Queen
 # N * N 크기의 체스판 위에 퀸 N개
+# Pypy3 로 해결
 
 n = int(input())
 
