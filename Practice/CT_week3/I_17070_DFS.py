@@ -1,7 +1,7 @@
 # 파이프 옮기기 1
+# DFS 풀이 - Pypy3 로 실행
 
 import sys
-from collections import deque
 input = sys.stdin.readline
 
 N = int(input())
