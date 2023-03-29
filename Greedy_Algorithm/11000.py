@@ -1,19 +1,24 @@
-# 강의실 배정 - 그리디
-# 힙에는 가장 작은 원소로부터 정렬됨
+# 강의실 배정
 
 import heapq
+import sys
+input = sys.stdin.readline
 
-N = int(input())            # 수업 갯수
-heap = []
-lecture_list = [list(map(int, input().split())) for _ in range(N)]
-lecture_list.sort(key = lambda x: x[0])
-heapq.heappush(heap, lecture_list[0][1])
-for i in range(1, N):
-    # 끝날 시간보다 빠르면 일단 담아놓기
-    if lecture_list[i][0] < heap[0]:
-        heapq.heappush(heap, lecture_list[i][1])
-    else:
-        heapq.heappop(heap)     # 가장 빠른 종료 강의
-        heapq.heappush(heap, lecture_list[i][1])
+n = int(input())
+time = [list(map(int, input().split())) for _ in range(n)]
+time.sort()
 
-print(len(heap))
+cnt = 0
+lab = []
+for t in time:
+    if not lab:
+        heapq.heappush(lab, t[1])
+        continue
+    # 시작 시간
+    if lab[0] <= t[0]:
+        # 종료해서 처리해주기
+        heapq.heappop(lab)
+    # 시작 시간은 계속 넣기
+    heapq.heappush(lab, t[1])
+
+print(len(lab))
