@@ -1,56 +1,44 @@
-# Domitory Clean Problem
-# 영우의 기숙사 청소 문제
-# solution - 홀/짝 구분(순서 왓다갓다)
-
+#백준 15806번 영우의 기숙사청소
 from collections import deque
 
-def bfs():
-    dx = [1, 2, 1, 2, -1, -2, -1, -2]
-    dy = [2, 1, -2, -1, 2, 1, -2, -1]
-    day = 0
-    global cnt
-    
-    while queue:
-        x, y, day = queue.popleft()
-        
-        if day >= cnt:
+N,M,K,t=map(int,input().split())
+dir=[(-2,-1),(-2,1),(-1,2),(-1,-2),(1,-2),(1,2),(2,-1),(2,1)]
+q=deque()
+check=[]
+visited=[[[False]*2 for _ in range(N)] for _ in range(N)]
+for _ in range(M):
+    x, y=map(int,input().split())
+    q.append((x-1,y-1,0))
+    visited[y-1][x-1][0]=True
+
+for _ in range(K):
+    x, y=map(int,input().split())
+    check.append((x-1,y-1))
+
+while q:
+    x, y, day = q.popleft()
+    if day >= t:
+        continue
+
+    for d in range(8):
+        nx = x + dir[d][0]
+        ny = y + dir[d][1]
+
+        if nx < 0 or nx >= N or ny < 0 or ny >= N:
             continue
 
-        spread = False      # 곰팡이 퍼지는 여부
-        for i in range(8):
-            nx, ny = x + dx[i], y + dy[i]
-            if (0 <= nx < N) and (0 <= ny < N):
-                next_day = (day + 1) % 2
-                if virus[nx][ny][next_day] == False:
-                    virus[nx][ny][next_day] = True
-                    queue.append((nx, ny, day+1))
-                    spread = True
-        # 곰팡이 못 퍼지면 그 자리 끝
-        if not spread:
-            virus[x][y][(day%2)]=False
+        next = (day + 1) % 2
+        if visited[ny][nx][next] == True:
+            continue
+        visited[ny][nx][next] = True
+        q.append((nx, ny, day+1))
+    else:
+        visited[y][x][(day%2)]=False
 
-# Input - User
-N, M, K, cnt = map(int, input().split())
-virus = [[[False]*2 for _ in range(N)] for _ in range(N)]   # 방 상태 - 곰팡이 홀/짝 일수
-queue = deque()
-insp = []
-
-for i in range(M):
-    x, y = map(int, input().split())
-    virus[x-1][y-1][0] = True
-    queue.append((x-1, y-1, 0))
-
-for i in range(K):
-    x, y = map(int, input().split())
-    insp.append((x-1, y-1))
-
-# Output - Print
-bfs()
-
-cnt = cnt % 2
-ans = 'NO'
-for x, y in insp:
-    if virus[x][y][cnt % 2] == True:
-        ans = 'YES'
+day = t % 2
+for i, j in check:
+    if visited[j][i][day]==True:
+        print("YES")
         break
-print(ans)
+else:
+    print("NO")
