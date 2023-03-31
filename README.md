@@ -3,8 +3,10 @@
 
 [풀이 - 도움말](https://help.acmicpc.net/)
 
+<br><br>
+<br><br>
 
-## 참고: 런타임(Runtime)
+### 참고: 런타임(Runtime)
 ```py
 # 일반적으로 파일을 읽느냐, 입력을 받느냐로
 import time
