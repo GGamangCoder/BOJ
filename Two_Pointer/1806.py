@@ -21,4 +21,4 @@ while True:
             break
         s += lst[j]
 
-print(ans)
+print(0) if ans==10001 else print(ans)
