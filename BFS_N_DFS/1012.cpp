@@ -1,4 +1,4 @@
-// 숨바꼭질
+// 유기농 배추
 
 #include <iostream>
 #include <vector>
