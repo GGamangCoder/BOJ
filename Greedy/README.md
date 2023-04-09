@@ -4,6 +4,8 @@
 
 <br>
 
+* 1931 문제: 회의실 배정 **[[문제]](https://www.acmicpc.net/problem/1931)** / **[[풀이]](1931.py)**
+
 * 21314번 문제: 민겸수 **[[문제]](https://www.acmicpc.net/problem/21314)** / **[[풀이]](21314.py)**
 
 * 20365번 문제: 블로그2 **[[문제]](https://www.acmicpc.net/problem/20365)** / **[[풀이]](20365.py)**
