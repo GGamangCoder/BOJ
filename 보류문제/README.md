@@ -3,12 +3,13 @@
 
 <br>
 
-> 분류
-
-* 1525 문제: 퍼즐 **[[문제]](https://www.acmicpc.net/problem/1525)** / **[[풀이]](1525_퍼즐.py)**
-
+> 분류  
 * □□□ 문제: □□□ **[[문제]](https://www.acmicpc.net/problem/□□□)** / **[[풀이]](□□□.py)**
-* □□□ 문제: □□□ **[[문제]](https://www.acmicpc.net/problem/□□□)** / **[[풀이]](□□□.py)**
+
+
+* 1525 문제: 퍼즐 **[[문제]](https://www.acmicpc.net/problem/1525)** / **[[풀이]](1525_퍼즐.py)**   // 이진 탐색
+
+* 2110 문제: 공유기 설치 **[[문제]](https://www.acmicpc.net/problem/□□□)** / **[[풀이]](□□□.py)**
 
 
 <hr>
