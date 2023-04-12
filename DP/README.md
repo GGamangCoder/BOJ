@@ -16,6 +16,7 @@
     - [참고 - 14002](https://minyeok2ee.gitlab.io/boj/boj-14002/)
     - [참고 - 14002(2)](https://iridescent-zeal.tistory.com/44)
 
+* 12865 문제: 평범한 배낭  **[[문제]](https://www.acmicpc.net/problem/12865)** / **[[풀이]]('12865.py')**    230412
 
 * 14720번 문제: 우유 축제  **[[문제]](https://www.acmicpc.net/problem/14720)** / **[[풀이]](14720.py)**
 
