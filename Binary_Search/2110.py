@@ -34,3 +34,5 @@ while start <= end:
     else:
         # 적으면 최대치를 줄여줘
         end = mid -1
+
+print()
