@@ -10,7 +10,8 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 # 각 지점에 대해서 스스로 부모 노드
 parent = [x for x in range(n+1)]        # 0, 1~n
-node = [0] + list(input().split())            # n-1개, 하나씩 땡겨져 있음
+v = [True] + [False]*n                  # 방문에 대한,
+node = [0] + list(input().split())
 # 간선에 대한 정보, [시작, 끝, 크기]
 edge = [[0] for _ in range(m)]
 for i in range(m):
@@ -41,10 +42,10 @@ for start, end, val in edge:
     if find(start) != find(end) and node[start] != node[end]:
         union(start, end)
         ans += val
-        cnt += 1        # 연결 횟수를 카운팅
-    if cnt == n-1:
-        break
-if cnt != n-1:
+        v[start] = True
+        v[end] = True
+
+if False in v:
     ans = -1
 
 print(ans)
