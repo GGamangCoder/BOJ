@@ -29,6 +29,7 @@ graph = [list(map(int, input().split())) for _ in range(n)]
 minValue = sys.maxsize
 
 visited = [0] * n
+# 여기서 틀렸었음. - 시작 지점이 랜덤이므로
 for i in range(n):
     visited[i] = 1
     dfs(i, i, 0, 1)
