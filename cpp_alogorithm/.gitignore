@@ -1,0 +1,11 @@
+./build
+
+build/*
+
+*build
+
+.cph/
+
+*.cph
+
+*.vscode/
